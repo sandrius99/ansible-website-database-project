@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Skambučių centras</title>
+	<meta charset="utf-8" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="public/style.css">
+</head>
+
+<body>
+
+	<nav>
+		<img class="logo" src="public/logo.svg" alt="">
+		<ul>
+			<li class="active"><a href="/">Namai</a></li>
+			<li><a href="produktai">Produktai</a></li>
+			<li><a href="skambuciai">Skambučiai</a></li>
+			<li><a href="kontaktai">Kontaktai</a></li>
+		</ul>
+	</nav>
+	<div id="body-overlay" class="body-blackout"></div>
+	<section class="landing">
+		<div class="text-intro">
+			<h2>Skambutis</h2>
+			<h3>Norėdami sužinoti daugiau spauskite žemiau</h3>
+			<button href="#" id="formBtn" class="myButton">Skambinti</button>
+		</div>
+		<div class="img-intr">
+			<img src="public/circle.svg" alt="">
+		</div>
+	</section>
+
+	<img class="wave" src="public/bg.svg">
+
+	<div class="popup-modal" id="popup" data-popup-modal="one">
+		<i class="close-icon popup-modal__close noselect">X</i>
+		<h1 class="modal-title">
+			Registracija skambučiui
+		</h1>
+		<form id="reg-form">
+			<label for="name">Vardas</label>
+			<input class="form-input" type="text" name="name" required>
+			<label for="surname">Pavardė</label>
+			<input class="form-input" type="text" name="surname" required>
+			<label for="number">Numeris arba vartotojo vardas</label>
+			<input class="form-input" type="text" name="number" required>
+			<label for="number">Šalis</label>
+			<input class="form-input" type="text" name="country" required>
+			<label for="type">Susisiekimo tipas</label>
+			<select class="form-input form-select" name="type">
+				<option value="skype">Skype</option>
+				<option value="phone">Telefonu</option>
+				<option value="discord">Discord</option>
+			</select>
+			<button type="submit" class="reg-btn form-input">Registruotis</button>
+		</form>
+	</div>
+
+	<div class="popup-modal" id="popup-success" data-popup-modal="two">
+		<i class="close-icon popup-modal__close noselect">X</i>
+		<h1 class="modal-title">
+			Jūsų registracija sekmingai užregistruota, susisieksime su jumis artimiausiu metu.
+		</h1>
+		<button type="submit" class="reg-btn form-input" onclick="hidePopup()">Gerai</button>
+	</div>
+	<div class="popup-modal" id="popup-error" data-popup-modal="three">
+		<i class="close-icon popup-modal__close noselect">X</i>
+		<h1 class="modal-title">
+			Nepavyko užregistruoti, bandykite dar kartą.
+		</h1>
+		<button type="submit" class="reg-btn form-input" onclick="hidePopup()">Gerai</button>
+	</div>
+</body>
+<script src="public/main.js"></script>
+
+</html>
